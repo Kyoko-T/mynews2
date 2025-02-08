@@ -8,6 +8,6 @@
         <title>list</title>
     </head>
     <body>
-        <h1>My List 作成画面</h1>
+        <h1>MyList 作成画面</h1>
     </body>
 </html>

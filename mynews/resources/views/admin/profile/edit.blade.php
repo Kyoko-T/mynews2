@@ -8,6 +8,6 @@
         <title>edit</title>
     </head>
     <body>
-        <h1>編集過程</h1>
+        <h1>編集の過程</h1>
     </body>
 </html>
