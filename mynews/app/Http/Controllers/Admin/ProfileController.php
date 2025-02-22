@@ -10,7 +10,8 @@ class ProfileController extends Controller
     //
     public function add()
     {
-        return view(' admin.profile.create');
+        return view(' 
+        admin.profile.create');
     }
 
     // Laravel13課題3で追記
