@@ -13,8 +13,10 @@ class ProfileController extends Controller
         return view(' admin.profile.create');
     }
 
-    public function create()
+    // Laravel13課題3で追記
+    public function create(Request $request)
     {
+        // admin/profile/createにリダイレクトする。
         return redirect(' admin/profile/create');
     }
 
