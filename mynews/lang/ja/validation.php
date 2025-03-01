@@ -168,7 +168,11 @@ return [
     'attributes' => [
         //以下Laravel14で追記
         'title' => 'タイトル',
-        'body' => '本文'
+        'body' => '本文',
+        'name' => '名前',
+        'gender' => '性別',
+        'hobby' => '趣味',
+        'introduction' => '自己紹介'
     ],
 
 ];
