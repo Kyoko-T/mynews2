@@ -22,7 +22,7 @@ Route::controller(NewsController::class)->prefix('admin')->name('admin.')->middl
     Route::get('news/create', 'add')->name('news.add');
     Route::post('news/create', 'create')->name('news.create');
     //以下Laravel15 Routingを実装するで追記
-    Route::get('news', 'index')->name('news index');
+    Route::get('news', 'index')->name('news.index');
 });
 
 

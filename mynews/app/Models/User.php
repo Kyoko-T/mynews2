@@ -43,8 +43,3 @@ class User extends Authenticatable
     ];
 }
 
-User::create([
-    'name' => 'Kyoko.Tawaramoto',
-    'email' => 'balalaika78koko@gmail.com',
-    'password' => Hash::make("d*CGF7uAfSC@fp9"),
-]);
