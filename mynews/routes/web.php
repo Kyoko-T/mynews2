@@ -18,15 +18,13 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\Admin\NewsController;
-Route::controller(NewsController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+Route::controller(NewsController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function(){    
     Route::get('news/create', 'add')->name('news.add');
     Route::post('news/create', 'create')->name('news.create');
-    //以下Laravel15 Routingを実装するで追記
     Route::get('news', 'index')->name('news.index');
-    //以下Laravel16 Routingを実装するで追記
     Route::get('news/edit', 'edit')->name('news.edit');
     Route::post('news/edit', 'update')->name('news.update');
-
+    Route::get('news/delete', 'delete')->name('news.delete');
 });
 
 
@@ -36,6 +34,7 @@ Route::controller(ProfileController::class)->prefix('admin')->name('admin.')->mi
     Route::post('profile/create', 'create')->name('profile.create');
     Route::get('profile/edit', 'edit')->name('profile.edit');
     Route::post('profile/edit', 'update')->name('profile.update');
+
 });
 Auth::routes();
 

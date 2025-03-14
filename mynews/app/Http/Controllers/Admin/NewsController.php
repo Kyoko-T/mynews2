@@ -62,7 +62,7 @@ class NewsController extends Controller
         return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
-    // 以下Laravel16　Controllerを実装で追記
+    // 以下Laravel16データの更新 Controllerを実装で追記
     public function edit(Request $request)
     {
         // News Modelからデータを取得する

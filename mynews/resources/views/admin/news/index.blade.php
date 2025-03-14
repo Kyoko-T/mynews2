@@ -48,7 +48,7 @@
                                             <a href="{{ route('admin.news.edit', ['id' => $news->id]) }}">編集</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route('admin.news.delete', ['id =>  $news->id) }}">削除</a>
+                                            <a href="{{ route('admin.news.delete', ['id' => $news->id]) }}">削除</a>
                                         </div>    
                                     </td>       
                                 </tr>
