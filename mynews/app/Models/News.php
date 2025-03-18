@@ -16,10 +16,12 @@ class News extends Model
         'body' => 'required',
     );
 
-    // 以下Laravel17で追記
+    // 以下Laravel17編集履歴テーブルの作成と関連付けで追記
     // News Modelに関連付けを行う
     public function histories()
     {
-        return $this->hasmany('App\Models\History');
+        return $this->hasMany('App\Models\History');
     }
+ 
+
 }

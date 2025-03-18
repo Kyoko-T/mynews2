@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 // 以下の1行を追記することで、Profile Modelが扱えるようになる
 use App\Models\Profile;
+// Laravel17 課題　以下の２行を追記することで、ProfileHistory model, Carbonクラスが扱えるようになる
+use App\Models\ProfileHistory;
+use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
@@ -62,6 +65,12 @@ class ProfileController extends Controller
 
         // 該当するデータを上書きして保存する
         $profile->fill($profile_form)->save();
+
+        //以下Laravel17課題で追記
+        $profilehistory = new ProfileHistory();
+        $profilehistory->profile_id = $profile->id;
+        $profilehistory->edited_at = Carbon::now();
+        $profilehistory->save();
 
         return redirect('admin/profile/edit?id=1');
     }

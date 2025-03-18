@@ -50,6 +50,20 @@
                         </div>
                     </div>
                 </form>
+                {{-- 以下Laravel17課題7で追記 --}}
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @if ($profile_form->profilehistories != null)
+                                @foreach ($profile_form->profilehistories as $profilehistory)
+                                    <li class="list-group-item">{{ $profilehistory->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+                {{-- 以上を追記 --}}
             </div>
         </div>
     </div>

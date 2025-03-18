@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-// 以下の１行を追加することでNews Modelが扱えるようになる
+// 以下の１行を追記することでNews Modelが扱えるようになる
 use App\Models\News;
+// Laravel17 編集履歴の記録と参照　以下の２行を追記することで、History model, Carbonクラスが扱えるようになる
+use App\Models\History;
+use Carbon\Carbon;
 
 class NewsController extends Controller
 {
@@ -97,6 +100,12 @@ class NewsController extends Controller
 
         // 該当するデータを上書きして保存する
         $news->fill($news_form)->save();
+
+        // 以下Laravel17編集履歴の記録と参照で追記
+        $history = new History();
+        $history->news_id = $news->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
 
         return redirect('admin/news');
     }

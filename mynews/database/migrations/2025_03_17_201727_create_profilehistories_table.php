@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('histories', function (Blueprint $table) {
+        Schema::create('profile_histories', function (Blueprint $table) {
             $table->id();
-            //以下Laravel17で追記
-            $table->bigInteger('news_id');
+            //以下Laravel17課題で追記
+            $table->bigInteger('profile_id');
             $table->string('edited_at');
 
             $table->timestamps();
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('histories');
+        Schema::dropIfExists('profile_histories');
     }
 };
