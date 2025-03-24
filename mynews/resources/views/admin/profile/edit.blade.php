@@ -39,7 +39,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="introduction">自己紹介欄</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="introduction" rows="10">{{ $profile_form->introduction }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="5">{{ $profile_form->introduction }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
